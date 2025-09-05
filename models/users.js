@@ -25,12 +25,3 @@ const usersSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Users', usersSchema);
-// Users model (for multiple users, if needed)
-const mongoose = require('mongoose');
-
-const usersSchema = new mongoose.Schema({
-  users: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Users', usersSchema);

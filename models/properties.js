@@ -76,18 +76,3 @@ const propertiesSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Properties', propertiesSchema);
-// Properties model
-const mongoose = require('mongoose');
-
-const propertiesSchema = new mongoose.Schema({
-  title: String,
-  description: String,
-  price: Number,
-  location: String,
-  images: [String],
-  developer: { type: mongoose.Schema.Types.ObjectId, ref: 'Developers' },
-  parameters: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PropertyParameters' }],
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Properties', propertiesSchema);

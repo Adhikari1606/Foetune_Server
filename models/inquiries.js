@@ -20,16 +20,3 @@ const inquiriesSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Inquiries', inquiriesSchema);
-// Inquiries model
-const mongoose = require('mongoose');
-
-const inquiriesSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String,
-  message: String,
-  propertyId: { type: mongoose.Schema.Types.ObjectId, ref: 'Properties' },
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Inquiries', inquiriesSchema);

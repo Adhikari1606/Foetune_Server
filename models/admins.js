@@ -35,15 +35,3 @@ const adminsSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Admins', adminsSchema);
-// Admins model
-const mongoose = require('mongoose');
-
-const adminsSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  password: String,
-  role: { type: String, default: 'admin' },
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Admins', adminsSchema);

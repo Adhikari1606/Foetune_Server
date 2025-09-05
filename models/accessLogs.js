@@ -14,14 +14,4 @@ const accessLogsSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('AccessLogs', accessLogsSchema);
-// AccessLogs model
-const mongoose = require('mongoose');
 
-const accessLogsSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  action: String,
-  timestamp: { type: Date, default: Date.now },
-  details: Object
-});
-
-module.exports = mongoose.model('AccessLogs', accessLogsSchema);
